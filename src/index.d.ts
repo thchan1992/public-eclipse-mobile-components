@@ -1,1 +1,5 @@
-export * from "./CustomButton.d.ts";
+// export * from "./components/CustomButton.d.ts";
+export * from "./components/PrimaryButton.d.ts";
+export * from "./util/colours.d.ts";
+export * from "./util/dimensions.d.ts";
+export * from "./components/TextField.d.ts";

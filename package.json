@@ -1,7 +1,7 @@
 {
   "name": "eclipse-mobile-components",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Added Primary Button and Text Field components",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
