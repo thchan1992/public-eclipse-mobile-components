@@ -3,3 +3,4 @@ export { PrimaryButton } from "./components/PrimaryButton";
 export * from "./util/colours";
 export * from "./util/dimensions";
 export { TextField } from "./components/TextField";
+export { CustomModal } from "./components/CustomModal";
