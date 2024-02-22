@@ -5,7 +5,7 @@ interface PrimaryButtonProps extends TouchableOpacityProps {
   onPress: () => void;
   size: "small" | "large";
   textColour?: string;
-  backgroundColor?: string;
+  backgroundColour?: string;
   borderRadius?: number;
   borderWidth?: number;
   textStyle?: any;

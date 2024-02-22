@@ -42,7 +42,9 @@ export const PrimaryButton = ({
     ...sizeStyles,
     ...(width !== undefined && { width }),
     ...(height !== undefined && { height }),
-    backgroundColour,
+    ...(backgroundColour !== undefined && {
+      backgroundColor: backgroundColour,
+    }),
     borderRadius,
     borderWidth,
   };
@@ -58,6 +60,7 @@ export const PrimaryButton = ({
 
 const styles = StyleSheet.create({
   button: {
+    backgroundColor: buttonColour,
     margin: 12,
     alignItems: "center",
     justifyContent: "center",
