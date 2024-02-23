@@ -6,3 +6,4 @@ export { TextField } from "./components/TextField";
 export { CustomModal } from "./components/CustomModal";
 export { CustomWarning } from "./components/CustomWarning";
 export { CustomAvatar } from "./components/CustomAvatar";
+export { TabSystem } from "./components/TabSystem";
