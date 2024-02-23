@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     height: getScreenWidth() * 0.08,
     justifyContent: "center",
     alignItems: "center",
+    elevation: defaultElevation + 1,
   },
   badgeText: {
     fontWeight: "bold",

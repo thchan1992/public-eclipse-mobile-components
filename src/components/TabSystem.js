@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { defaultBorderRadius, defaultBorderWidth } from "../util/border";
 import { getScreenWidth, getScreenHeight } from "../util/dimensions";
+import {
+  defaultElevation,
+  defaultShadowColor,
+  defaultShadowOffset,
+  defaultShadowOpacity,
+  defaultShadowRadius,
+} from "../util/shadow";
 
 export const TabSystem = ({
   tabOneTitle,
@@ -59,6 +66,11 @@ const styles = StyleSheet.create({
   tabContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    shadowColor: defaultShadowColor,
+    shadowOffset: defaultShadowOffset,
+    shadowOpacity: defaultShadowOpacity,
+    shadowRadius: defaultShadowRadius,
+    elevation: defaultElevation,
   },
   text: { color: "grey", textAlign: "center" },
   activeText: { color: "black", fontWeight: "bold" },
@@ -85,5 +97,11 @@ const styles = StyleSheet.create({
     padding: 20,
     width: getScreenWidth() * 0.95,
     height: getScreenHeight() * 0.7,
+    shadowColor: defaultShadowColor,
+    shadowOffset: defaultShadowOffset,
+    shadowOpacity: defaultShadowOpacity,
+    shadowRadius: defaultShadowRadius,
+    elevation: defaultElevation,
+    backgroundColor: "white",
   },
 });

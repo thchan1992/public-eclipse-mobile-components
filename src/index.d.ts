@@ -7,3 +7,4 @@ export * from "./components/CustomModal.d.ts";
 export * from "./components/CustomWarning.d.ts";
 export * from "./components/CustomAvatar.d.ts";
 export * from "./components/TabSystem.d.ts";
+export * from "./components/AccordionSection.d.ts";
