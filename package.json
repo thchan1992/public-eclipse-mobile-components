@@ -1,7 +1,7 @@
 {
   "name": "eclipse-mobile-components",
-  "version": "1.0.3",
-  "description": "Adjusted Primary Button",
+  "version": "1.1.0",
+  "description": "added extra components",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {

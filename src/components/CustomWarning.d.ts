@@ -5,6 +5,7 @@ export interface CustomWarningProps extends ModalProps {
   message: string;
   onClose: () => void;
   title: string;
+  buttonOneTitle?: string;
   buttonTwoTitle?: string;
   buttonTwoOnClick?: () => void;
 }

@@ -23,6 +23,7 @@ export const CustomWarning = ({
   message,
   onClose,
   title,
+  buttonOneTitle,
   buttonTwoTitle,
   buttonTwoOnClick,
 }) => {
@@ -45,7 +46,7 @@ export const CustomWarning = ({
             {Platform.OS === "ios" ? (
               <PrimaryButton
                 width={getScreenWidth() * 0.3}
-                title={title}
+                title={buttonOneTitle !== undefined ? buttonOneTitle : "Close"}
                 onPress={onClose}
               />
             ) : (
