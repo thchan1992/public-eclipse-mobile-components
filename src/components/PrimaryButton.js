@@ -15,7 +15,7 @@ export const PrimaryButton = ({
   title,
   onPress,
   size,
-  backgroundColour = buttonColour,
+  backgroundColour,
   textColour,
   borderRadius = defaultBorderRadius,
   borderWidth = defaultBorderWidth,
@@ -23,18 +23,22 @@ export const PrimaryButton = ({
   width,
   height,
 }) => {
-  const sizeStyles = size
-    ? {
-        small: {
+  const sizeStyles =
+    size !== undefined
+      ? {
+          small: {
+            height: getScreenHeight() * 0.05,
+            width: getScreenWidth() * 0.35,
+          },
+          large: {
+            height: getScreenHeight() * 0.05,
+            width: getScreenWidth() * 0.8,
+          },
+        }[size] || small
+      : {
           height: getScreenHeight() * 0.05,
           width: getScreenWidth() * 0.35,
-        },
-        large: {
-          height: getScreenHeight() * 0.05,
-          width: getScreenWidth() * 0.8,
-        },
-      }[size]
-    : {};
+        };
 
   // conditional style application
   const buttonStyle = {
@@ -42,9 +46,11 @@ export const PrimaryButton = ({
     ...sizeStyles,
     ...(width !== undefined && { width }),
     ...(height !== undefined && { height }),
-    ...(backgroundColour !== undefined && {
-      backgroundColor: backgroundColour,
-    }),
+    ...(backgroundColour !== undefined
+      ? {
+          backgroundColor: backgroundColour,
+        }
+      : { backgroundColor: buttonColour }),
     borderRadius,
     borderWidth,
   };
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: "center",
-    margin: 10,
+    margin: 5,
     fontWeight: "bold",
     fontSize: getScreenWidth() * 0.04,
   },

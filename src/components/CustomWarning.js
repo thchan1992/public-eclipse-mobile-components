@@ -8,11 +8,7 @@ import {
   Platform,
   Button,
 } from "react-native";
-import {
-  PrimaryButton,
-  getScreenHeight,
-  getScreenWidth,
-} from "eclipse-mobile-components";
+import { getScreenHeight, getScreenWidth } from "eclipse-mobile-components";
 import { defaultBorderRadius, defaultBorderWidth } from "../util/border";
 import {
   defaultShadowColor,
@@ -21,6 +17,7 @@ import {
   defaultShadowRadius,
   defaultElevation,
 } from "../util/shadow";
+import { PrimaryButton } from "./PrimaryButton";
 export const CustomWarning = ({
   visible,
   message,
@@ -49,27 +46,23 @@ export const CustomWarning = ({
               <PrimaryButton
                 width={getScreenWidth() * 0.3}
                 title={title}
-                size="small"
                 onPress={onClose}
               />
             ) : (
               <View style={{ padding: 1 }}>
-                <Button title={title} onPress={onClose} />
+                <PrimaryButton
+                  width={getScreenWidth() * 0.3}
+                  title={title}
+                  onPress={onClose}
+                />
               </View>
             )}
             {buttonTwoTitle !== undefined && buttonTwoOnClick !== undefined ? (
-              Platform.OS === "ios" ? (
-                <PrimaryButton
-                  width={getScreenWidth() * 0.3}
-                  title={buttonTwoTitle}
-                  size="small"
-                  onPress={buttonTwoOnClick}
-                />
-              ) : (
-                <View style={{ padding: 1 }}>
-                  <Button title={buttonTwoTitle} onPress={buttonTwoOnClick} />
-                </View>
-              )
+              <PrimaryButton
+                width={getScreenWidth() * 0.3}
+                title={buttonTwoTitle}
+                onPress={buttonTwoOnClick}
+              />
             ) : null}
           </View>
         </View>

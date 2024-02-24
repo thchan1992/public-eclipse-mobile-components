@@ -3,7 +3,7 @@ import { TouchableOpacityProps } from "react-native";
 interface PrimaryButtonProps extends TouchableOpacityProps {
   title: string;
   onPress: () => void;
-  size: "small" | "large";
+  size?: "small" | "large";
   textColour?: string;
   backgroundColour?: string;
   borderRadius?: number;
